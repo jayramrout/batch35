@@ -2,4 +2,10 @@ Open Gitbash
  Execute the below command:
  git clone https://github.com/jayramrout/batch35.git
 
-Adding more info...
+This is to pull the files into your local machine..
+git pull origin main
+
+THis is to see what is been modified...
+git status
+
+couple of more message...

@@ -1,3 +1,5 @@
+package datatypes;
+
 public class DataTypes {
     public static void main(String[] args) {
         // Person name Rahul;
@@ -6,8 +8,8 @@ public class DataTypes {
         String name = "John";
         // long
         int age = 20;
-        short age_ = 200;
-        byte age__ = 20;
+        short age_ = 200; // Short
+        byte age__ = 20; // Byte
 
         // datatype variable name = data
 

@@ -1,5 +1,8 @@
+package basics;
+
 public class AddTwoNumber {
     public static void main(String[] args) {
+//        java basics.AddTwoNumber 1 2
 //        System.out.println("First Name is "+ args[0]);
 //        System.out.println("LastName is "+ args[1]);
 

@@ -13,6 +13,9 @@ public class ArrayExample_forLoop {
         for(int idx = 0 ; idx < ageLength; idx++) {
             System.out.println("ages[idx] "+ages[idx]);
             // if... TODO: print the text as below...
+            if(ages[idx] == 10) {
+                System.out.println("Your age is TEN");
+            }
             // Your age is TEN
             // Your age is TWENTY
             // Your age is THIRTY

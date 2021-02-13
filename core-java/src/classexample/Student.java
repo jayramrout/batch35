@@ -1,6 +1,8 @@
 package classexample;
 
 public class Student {
+//    int id; // no modifier
+//    public int id; // public
     private int id;
     private String name;
     private String [] subjects;

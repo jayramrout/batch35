@@ -1,5 +1,7 @@
 package classexample;
 
+import classexample.Student;
+
 public class ConstructorExample {
     public static void main(String[] args) {
         new Person();

@@ -6,7 +6,7 @@ public class SetterGetterExample {
         Address address = new Address();
         address.country = "Usa";
         student.setAddress(address);
-        student.validate();
+//        student.validate();
         // set
 
         // get

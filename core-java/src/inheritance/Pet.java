@@ -29,7 +29,7 @@ public abstract class Pet {
         this.sound = sound;
     }
 
-
+    // state and behaviour
     public void makeNoise() {
         System.out.println("Hi my name " +
                 "is "+ this.name +" my color is "+ this.color);
@@ -39,4 +39,9 @@ public abstract class Pet {
     public abstract void shelter();
 
 //    public abstract void dna();
+
+    @Override
+    public String toString() {
+        return "Name is "+ this.getName() +" "+ getColor() + " " + getSound();
+    }
 }

@@ -2,7 +2,7 @@ package inheritance;
 /*
     concrete classes or implementation classes
  */
-public class Cat extends Pet {
+public class Cat extends Pet implements IJumping {
 
     @Override // annotation is a metadata: data about data
     public void makeNoise() {
@@ -15,7 +15,12 @@ public class Cat extends Pet {
     }
 
     @Override
+    public void jump() {
+        System.out.println("I am a cat and i can jump...");
+    }
+
+    /*@Override
     public void dna() {
         System.out.println("This my dna xxxx9x9x9x9x9x9");
-    }
+    }*/
 }

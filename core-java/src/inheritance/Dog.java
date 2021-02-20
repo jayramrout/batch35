@@ -1,6 +1,5 @@
 package inheritance;
 
-import org.w3c.dom.ls.LSOutput;
 
 public class Dog extends Pet implements ISwimming , IJumping{
 
@@ -9,6 +8,7 @@ public class Dog extends Pet implements ISwimming , IJumping{
         System.out.println("I am a dog and my name is " +
                 ""+ getName() +" my color is "+ super.getColor());
         System.out.println("I make noise as Woff!!");
+        String str ="";
     }
 
     @Override

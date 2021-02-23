@@ -1,5 +1,8 @@
 package classexample;
 
+import exception.Exception_6_UserDefinedException;
+import exception.HelloDivideByZeroException;
+
 public class DriverClass {
     /*
     main method/function
@@ -30,6 +33,10 @@ public class DriverClass {
         System.out.println(person2.name + " "+ person2.height +" "+ person2.address);
 
 //        System.out.println(person2);
+        try{
+            Exception_6_UserDefinedException.divide(5,0);
+        }catch (Exception hbze){
 
+        }
     }
 }

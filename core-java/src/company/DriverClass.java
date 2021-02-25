@@ -2,6 +2,9 @@ package company;
 
 import classexample.Person;
 import com.jrout.tax.TaxCalculator;
+import rmi.FetchNamesImpl;
+
+import java.rmi.RemoteException;
 
 public class DriverClass {
     public static void main(String[] args) {

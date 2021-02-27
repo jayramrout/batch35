@@ -1,16 +1,31 @@
 package classexample;
 
+import java.io.Serializable;
+
 /**
  * Person is a real world entity
  * POJO : Plain Old Java Object
  * Domain Object
  *
  */
-public class Person {
+public class Person implements Serializable {
     String name; // instance variables
     int height; //premitive vs wrapper
     String address;
     Address address1;
+    transient String ssn;
+    public static String classVariable;
+
+    public String getSsn() {
+        return ssn;
+    }
+
+    public void setSsn(String ssn) {
+        this.ssn = ssn;
+    }
+
+
+
 
     public String getName() {
         return name;
@@ -51,4 +66,8 @@ public class Person {
 //    public Person(){
 //
 //    }
+
+    public void eat(){
+
+    }
 }

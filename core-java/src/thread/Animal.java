@@ -1,0 +1,3 @@
+package thread;
+
+class Animal{}

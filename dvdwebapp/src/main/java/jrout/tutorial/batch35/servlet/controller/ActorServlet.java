@@ -16,6 +16,22 @@ import java.util.List;
 
 @WebServlet(name = "HelloWorldServlet", urlPatterns = {"/actor"})
 public class ActorServlet extends HttpServlet {
+   /* @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doGet(req, resp);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doPost(req, resp);
+    }*/
+
+    @Override
+    public void init() throws ServletException {
+        super.init();
+    }
+
+
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
@@ -71,6 +87,12 @@ public class ActorServlet extends HttpServlet {
 
         writer.println(response);
 
+    }
+
+
+    @Override
+    public void destroy() {
+        super.destroy();
     }
 
     /*protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

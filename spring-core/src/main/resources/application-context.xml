@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-        <bean id="buildCar" class="jrout.tutorial.batch35.springcore.BuildCar">
-                <property name="engine" ref="4se"/>
-        </bean>
-
-        <bean id="2se" class="jrout.tutorial.batch35.springcore.TwoStrokeEngine">
-                <property name="engineType" value="2 S E" />
-        </bean>
-
-        <bean id="4se" class="jrout.tutorial.batch35.springcore.FourStrokeEngine">
-                <property name="engineType" value="4 S E" />
-        </bean>
-
+        <context:component-scan base-package="jrout.tutorial.batch35.springcore"/>
 </beans>

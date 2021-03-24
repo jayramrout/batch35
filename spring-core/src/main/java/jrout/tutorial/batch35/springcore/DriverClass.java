@@ -6,18 +6,17 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class DriverClass {
     public static void main(String[] args) {
 
-//        BuildCar buildCar = new BuildCar();
-//        FourStrokeEngine twoStrokeEngine = new FourStrokeEngine();
-//        twoStrokeEngine.setEngineType("4 SE");
-//        buildCar.setEngine(twoStrokeEngine);
-//        buildCar.buildCar();
+        /*FourStrokeEngine fourStrokeEngine = new FourStrokeEngine();
+        fourStrokeEngine.setEngineType("4 SE");
 
+        BuildCar buildCar = new BuildCar();
+        buildCar.setEngine(fourStrokeEngine);
+        buildCar.buildCar();*/
 
         ApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
         BuildCar buildCar = context.getBean("buildCar", BuildCar.class);
         buildCar.buildCar();
-
-
+/*
         buildCar = context.getBean("buildCar", BuildCar.class);
         buildCar.buildCar();
 
@@ -25,7 +24,7 @@ public class DriverClass {
         buildCar.buildCar();
 
         buildCar = context.getBean("buildCar", BuildCar.class);
-        buildCar.buildCar();
+        buildCar.buildCar();*/
 
 
     }

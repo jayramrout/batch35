@@ -1,10 +1,9 @@
-package jrout.tutorial.batch35.springcore;
+package jrout.tutorial.batch35.sb.core;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class DriverClass {
-
     public static void main(String[] args) {
 
         /*FourStrokeEngine fourStrokeEngine = new FourStrokeEngine();

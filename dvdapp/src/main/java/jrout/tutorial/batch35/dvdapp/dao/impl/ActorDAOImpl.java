@@ -2,6 +2,8 @@ package jrout.tutorial.batch35.dvdapp.dao.impl;
 
 import jrout.tutorial.batch35.dvdapp.dao.IActorDAO;
 import jrout.tutorial.batch35.dvdapp.domain.Actor;
+import jrout.tutorial.batch35.dvdapp.service.impl.ActorServiceImpl;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -11,13 +13,18 @@ import java.util.List;
 
 @Component
 public class ActorDAOImpl implements IActorDAO {
+    static Logger logger = Logger.getLogger(ActorDAOImpl.class);
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
     @Override
     public Actor fetchActor(int actorId) {
-
+//        System.out.println("Entering ActorDAOImpl.fetchActor"+ actorId);
+        logger.info("Entering ActorDAOImpl.fetchActor"+ actorId);
 //        Actor actor = jdbcTemplate.queryForObject("select * from actor where actor_id = " + actorId, Actor.class);
+
+//        if(actorId == 11)
+//            throw new RuntimeException("Some exction ");
 
         /*List<Actor> query = jdbcTemplate.query("select * from actor where actor_id = ?",
                 new Object[]{Integer.valueOf(actorId)},
@@ -37,6 +44,7 @@ public class ActorDAOImpl implements IActorDAO {
                 new BeanPropertyRowMapper(Actor.class),
                 Integer.valueOf(actorId));
 
+        logger.info("Exiting ActorDAOImpl.fetchActor"+ actor);
         return actor;
     }
 

@@ -1,0 +1,10 @@
+[2021-03-29 21:30:41,269] INFO  - main - jrout.tutorial.batch35.dvdapp.service.impl.ActorServiceImpl fetchActor - Entering fetchActor for actorId 11
+[2021-03-29 21:30:41,275] INFO  - main - jrout.tutorial.batch35.dvdapp.dao.impl.ActorDAOImpl fetchActor - Entering ActorDAOImpl.fetchActor11
+[2021-03-29 21:30:41,337] INFO  - main - jrout.tutorial.batch35.dvdapp.dao.impl.ActorDAOImpl fetchActor - Exiting ActorDAOImpl.fetchActorActor(actorId=11, firstName=Zero, lastName=Cage, lastUpdated=null, actorTag=null)
+[2021-03-29 21:30:41,338] DEBUG - main - jrout.tutorial.batch35.dvdapp.service.impl.ActorServiceImpl fetchActor - In fetchActor for zZZZZZ actorId 11
+[2021-03-29 21:30:41,339] INFO  - main - jrout.tutorial.batch35.dvdapp.service.impl.ActorServiceImpl fetchActor - Returning fetchActor for actorId 11
+[2021-03-29 21:31:44,822] INFO  - main - jrout.tutorial.batch35.dvdapp.service.impl.ActorServiceImpl fetchActor - Entering fetchActor for actorId 11
+[2021-03-29 21:31:44,832] INFO  - main - jrout.tutorial.batch35.dvdapp.dao.impl.ActorDAOImpl fetchActor - Entering ActorDAOImpl.fetchActor11
+[2021-03-29 21:31:44,919] INFO  - main - jrout.tutorial.batch35.dvdapp.dao.impl.ActorDAOImpl fetchActor - Exiting ActorDAOImpl.fetchActorActor(actorId=11, firstName=Zero, lastName=Cage, lastUpdated=null, actorTag=null)
+[2021-03-29 21:31:44,921] DEBUG - main - jrout.tutorial.batch35.dvdapp.service.impl.ActorServiceImpl fetchActor - In fetchActor for zZZZZZ actorId 11
+[2021-03-29 21:31:44,922] INFO  - main - jrout.tutorial.batch35.dvdapp.service.impl.ActorServiceImpl fetchActor - Returning fetchActor for actorId 11

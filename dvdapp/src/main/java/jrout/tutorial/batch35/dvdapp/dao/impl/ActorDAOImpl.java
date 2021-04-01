@@ -40,6 +40,10 @@ public class ActorDAOImpl implements IActorDAO {
                     }
                 });*/
 
+        // select * from actor where actor_id = postgres
+        // select * from 'actor' where actor_id = oracle
+        // select * from dvdapp.actor where actor_id = db2
+
         Actor actor = (Actor)jdbcTemplate.queryForObject("select * from actor where actor_id = ?",
                 new BeanPropertyRowMapper(Actor.class),
                 Integer.valueOf(actorId));

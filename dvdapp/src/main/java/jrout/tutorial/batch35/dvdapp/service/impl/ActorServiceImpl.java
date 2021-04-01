@@ -1,6 +1,7 @@
 package jrout.tutorial.batch35.dvdapp.service.impl;
 
 import jrout.tutorial.batch35.dvdapp.dao.IActorDAO;
+import jrout.tutorial.batch35.dvdapp.dao.IActorResource;
 import jrout.tutorial.batch35.dvdapp.domain.Actor;
 import jrout.tutorial.batch35.dvdapp.service.IActorService;
 import org.apache.log4j.Logger;
@@ -18,14 +19,30 @@ public class ActorServiceImpl implements IActorService {
     @Autowired
     private IActorDAO actorDAO;
 
-    @Override
+    @Autowired
+    IActorResource iActorResource;
+
+    /*@Override
     public Actor fetchActor(int actorId) { // 5 min
 //        System.out.println("Entering fetchActor for actorId "+ actorId);
         logger.info("Entering fetchActor for actorId "+ actorId);
         Actor actor = actorDAO.fetchActor(actorId);
         if(actor.getFirstName().startsWith("Z")) {
             logger.debug("In fetchActor for zZZZZZ actorId "+ actorId);
-            actor.setActorTag("Funny Actor");
+//            actor.setActorTag("Funny Actor");
+        }
+        logger.info("Returning fetchActor for actorId "+ actorId);
+        return actor;
+    }*/
+
+    @Override
+    public Actor fetchActor(int actorId) { // 5 min
+//        System.out.println("Entering fetchActor for actorId "+ actorId);
+        logger.info("Entering fetchActor for actorId "+ actorId);
+        Actor actor = iActorResource.findById(actorId).get();
+        if(actor.getFirstName().startsWith("Z")) {
+            logger.debug("In fetchActor for zZZZZZ actorId "+ actorId);
+//            actor.setActorTag("Funny Actor");
         }
         logger.info("Returning fetchActor for actorId "+ actorId);
         return actor;

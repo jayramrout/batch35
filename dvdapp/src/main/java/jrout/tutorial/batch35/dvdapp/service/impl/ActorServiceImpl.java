@@ -42,7 +42,7 @@ public class ActorServiceImpl implements IActorService {
         Actor actor = iActorResource.findById(actorId).get();
         if(actor.getFirstName().startsWith("Z")) {
             logger.debug("In fetchActor for zZZZZZ actorId "+ actorId);
-//            actor.setActorTag("Funny Actor");
+            actor.setActorTag("Funny Actor");
         }
         logger.info("Returning fetchActor for actorId "+ actorId);
         return actor;

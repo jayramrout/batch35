@@ -9,20 +9,20 @@ import java.util.Date;
 @Data
 @ToString
 @Entity
-@Table(name="actor")
+
+@NamedQuery(name="Actor.findAllEmpoyee", query = "select e from Actor e")
+@NamedNativeQuery(name = "Actor.findByLastName", query = "SELECT * FROM Actor WHERE last_name = ?1", resultClass = Actor.class)
 public class Actor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="actor_id")
-    private int actorId; // actor_id --> actorId
+    private int actorId;
 
-    @Column(name="first_name")
-    private String firstName; // first_name --> firstName
-    @Column(name="last_name")
+    private String firstName;
     private String lastName;
     @Column(name = "last_update")
     private Date lastUpdated;
 
-//    private String actorTag;
+    @Transient
+    private String actorTag;
 }

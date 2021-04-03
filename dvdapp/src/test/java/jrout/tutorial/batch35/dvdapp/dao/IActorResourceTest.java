@@ -2,6 +2,7 @@ package jrout.tutorial.batch35.dvdapp.dao;
 
 import jrout.tutorial.batch35.dvdapp.domain.Actor;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -10,7 +11,6 @@ import javax.persistence.Query;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class IActorResourceTest {
@@ -19,13 +19,16 @@ class IActorResourceTest {
     private IActorResource iActorResource;
 
     @Autowired
-    EntityManager entityManager;
+    private EntityManager entityManager;
 
     @Test
     void findById() {
         // converting premitive to Wrapper
-        Optional<Actor> byId = iActorResource.findById(Integer.valueOf(1));
-        System.out.println(byId.get());
+        Optional<Actor> byId = iActorResource.findById(Integer.valueOf(5));
+        //entityManager.find(Employee.class, id);
+//        System.out.println(byId.get());
+        assertEquals("Johnny",byId.get().getFirstName());
+        assertTrue("Johnny".equals(byId.get().getFirstName()));
     }
 
     @Test
@@ -36,7 +39,8 @@ class IActorResourceTest {
 
     @Test
     void findAllNamedQuery(){
-        Query namedQuery = entityManager.createNamedQuery("Actor.findAllEmpoyee");
+
+        Query namedQuery = entityManager.createNamedQuery("Actor.findAllActor");
         List resultList = namedQuery.getResultList();
         resultList.forEach(System.out::println);
     }
@@ -47,6 +51,14 @@ class IActorResourceTest {
         namedQuery.setParameter(1,"Davis");
         List resultList = namedQuery.getResultList();
         resultList.forEach(System.out::println);
+    }
+
+    @Test
+    void createActor(){
+        Actor actor = new Actor();
+        actor.setFirstName("Peter");
+        actor.setLastName("Pan");
+        iActorResource.save(actor);
     }
 
 }

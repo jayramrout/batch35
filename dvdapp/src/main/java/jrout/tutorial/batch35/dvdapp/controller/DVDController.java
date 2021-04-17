@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.Locale;
+
 @Controller
 public class DVDController {
     /*
@@ -39,7 +41,7 @@ public class DVDController {
     public String fetchActor(@ModelAttribute("actorInfo") Actor actorModel, Model model){
         Actor actor = iActorService.fetchActor(actorModel.getActorId());
         model.addAttribute("actor", actor);
-
+//        System.out.println("Hello".toLowerCase(Locale.ROOT));
         return "actordetails"; // index.html
     }
 

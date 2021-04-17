@@ -58,6 +58,7 @@ class IActorResourceTest {
         Actor actor = new Actor();
         actor.setFirstName("Peter");
         actor.setLastName("Pan");
+//        iActorResource.findById(1111);
         iActorResource.save(actor);
     }
 
